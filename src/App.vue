@@ -1,14 +1,12 @@
 <template>
-  <h1><span>Bonjour</span> le monde !</h1>
+  <button @click="toggle = !toggle">Toggle</button>
+  <h1 v-if="toggle">Hello le monde !</h1>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from 'vue';
 
-<style scoped lang="scss">
-h1 {
-  color: red;
-  span {
-    color: blue;
-  }
-}
-</style>
+const toggle = ref(true);
+</script>
+
+<style scoped lang="scss"></style>
